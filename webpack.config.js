@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -22,15 +23,11 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
+    filename: '[name].[hash].js',
   },
 
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist'),
-    },
-    compress: true,
-    port: 8080,
+    contentBase: path.join(__dirname, 'dist'),
   },
 
   module: {
@@ -38,10 +35,24 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         // 把 sass-loader 放在首要處理 (第一步)
-        // use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader','postcss-loader', 'sass-loader'],
       },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        }
+      }
     ],
   },
-  plugins: [new MiniCssExtractPlugin()],
+  devtool: 'source-map',
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'main.[hash].css',
+    }),
+    new HtmlWebpackPlugin({
+      template: './index.html'
+    })
+  ],
 };
