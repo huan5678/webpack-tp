@@ -1,0 +1,29 @@
+$primary: #0099FF;
+$secondary: #aabbcc;
+$white: #fff;
+$gray: #ccc;
+
+$color-themes: (
+  primary: $primary,
+  secondary: $secondary,
+  light: $gray,
+);
+
+h1 {
+  filter: blur(3px);
+  color: $primary;
+}
+
+@each $color, $val in $color-themes {
+  .text-#{$color}{
+    color: #{$val};
+  }
+}
+
+
+.container {
+  max-width: 1600px;
+  height: 100vh;
+  margin: 0 auto;
+  background: linear-gradient($white,#ccc);
+}
