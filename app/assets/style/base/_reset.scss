@@ -1,4 +1,4 @@
-/* Document
+/** Document
  * ========================================================================== */
 
 /**
@@ -18,8 +18,8 @@
  
  ::before,
  ::after {
-   text-decoration: inherit; /* 1 */
-   vertical-align: inherit; /* 2 */
+   text-decoration: inherit; /**1 */
+   vertical-align: inherit; /**2 */
  }
  
  /**
@@ -33,17 +33,17 @@
   */
  
  html {
-   cursor: default; /* 1 */
-   line-height: 1.5; /* 2 */
-   -moz-tab-size: 4; /* 3 */
-   tab-size: 4; /* 3 */
-   -webkit-tap-highlight-color: transparent /* 4 */;
-   -ms-text-size-adjust: 100%; /* 5 */
-   -webkit-text-size-adjust: 100%; /* 5 */
-   word-break: break-word; /* 6 */
+   cursor: default; /**1 */
+   line-height: 1.5; /**2 */
+   -moz-tab-size: 4; /**3 */
+   tab-size: 4; /**3 */
+   -webkit-tap-highlight-color: transparent /**4 */;
+   -ms-text-size-adjust: 100%; /**5 */
+   -webkit-text-size-adjust: 100%; /**5 */
+   word-break: break-word; /**6 */
  }
  
- /* Sections
+ /**Sections
   * ========================================================================== */
  
  /**
@@ -64,7 +64,7 @@
    margin: 0.67em 0;
  }
  
- /* Grouping content
+ /** Grouping content
   * ========================================================================== */
  
  /**
@@ -97,9 +97,9 @@
   */
  
  hr {
-   color: inherit; /* 1 */
-   height: 0; /* 2 */
-   overflow: visible; /* 3 */
+   color: inherit; /**1 */
+   height: 0; /**2 */
+   overflow: visible; /**3 */
  }
  
  /**
@@ -135,13 +135,13 @@
   */
  
  pre {
-   font-family: monospace, monospace; /* 1 */
-   font-size: 1em; /* 2 */
-   overflow: auto; /* 3 */
-   -ms-overflow-style: scrollbar; /* 3 */
+   font-family: monospace, monospace; /**1 */
+   font-size: 1em; /**2 */
+   overflow: auto; /**3 */
+   -ms-overflow-style: scrollbar; /**3 */
  }
  
- /* Text-level semantics
+ /** Text-level semantics
   * ========================================================================== */
  
  /**
@@ -178,8 +178,8 @@
  code,
  kbd,
  samp {
-   font-family: monospace, monospace; /* 1 */
-   font-size: 1em; /* 2 */
+   font-family: monospace, monospace; /**1 */
+   font-size: 1em; /**2 */
  }
  
  /**
@@ -190,10 +190,10 @@
    font-size: 80%;
  }
  
- /* Embedded content
+ /** Embedded content
   * ========================================================================== */
  
- /*
+ /**
   * Change the alignment on media elements in all browsers (opinionated).
   */
  
@@ -256,7 +256,7 @@
    overflow: hidden;
  }
  
- /* Tabular data
+ /** Tabular data
   * ========================================================================== */
  
  /**
@@ -266,12 +266,12 @@
   */
  
  table {
-   border-collapse: collapse; /* 1 */
-   border-color: inherit; /* 2 */
-   text-indent: 0; /* 3 */
+   border-collapse: collapse; /**1 */
+   border-color: inherit; /**2 */
+   text-indent: 0; /**3 */
  }
  
- /* Forms
+ /** Forms
   * ========================================================================== */
  
  /**
@@ -290,8 +290,8 @@
   */
  
  button {
-   overflow: visible; /* 1 */
-   text-transform: none; /* 2 */
+   overflow: visible; /**1 */
+   text-transform: none; /**2 */
  }
  
  /**
@@ -311,8 +311,8 @@
   */
  
  fieldset {
-   border: 1px solid #a0a0a0; /* 1 */
-   padding: 0.35em 0.75em 0.625em; /* 2 */
+   border: 1px solid #a0a0a0; /**1 */
+   padding: 0.35em 0.75em 0.625em; /**2 */
  }
  
  /**
@@ -329,10 +329,10 @@
   */
  
  legend {
-   color: inherit; /* 2 */
-   display: table; /* 1 */
-   max-width: 100%; /* 1 */
-   white-space: normal; /* 1 */
+   color: inherit; /**2 */
+   display: table; /**1 */
+   max-width: 100%; /**1 */
+   white-space: normal; /**1 */
  }
  
  /**
@@ -341,8 +341,8 @@
   */
  
  progress {
-   display: inline-block; /* 1 */
-   vertical-align: baseline; /* 2 */
+   display: inline-block; /**1 */
+   vertical-align: baseline; /**2 */
  }
  
  /**
@@ -360,10 +360,10 @@
   */
  
  textarea {
-   margin: 0; /* 1 */
-   overflow: auto; /* 2 */
-   resize: vertical; /* 3 */
-   resize: block; /* 3 */
+   margin: 0; /**1 */
+   overflow: auto; /**2 */
+   resize: vertical; /**3 */
+   resize: block; /**3 */
  }
  
  /**
@@ -381,8 +381,8 @@
   */
  
  [type="search"] {
-   -webkit-appearance: textfield; /* 1 */
-   outline-offset: -2px; /* 2 */
+   -webkit-appearance: textfield; /**1 */
+   outline-offset: -2px; /**2 */
  }
  
  /**
@@ -417,8 +417,8 @@
   */
  
  ::-webkit-file-upload-button {
-   -webkit-appearance: button; /* 1 */
-   font: inherit; /* 2 */
+   -webkit-appearance: button; /**1 */
+   font: inherit; /**2 */
  }
  
  /**
@@ -446,10 +446,10 @@
    box-shadow: none;
  }
  
- /* Interactive
+ /** Interactive
   * ========================================================================== */
  
- /*
+ /**
   * Add the correct display in Edge 18- and IE.
   */
  
@@ -457,7 +457,7 @@
    display: block;
  }
  
- /*
+ /**
   * Add the correct styles in Edge 18-, IE, and Safari.
   */
  
@@ -483,7 +483,7 @@
    display: none;
  }
  
- /*
+ /**
   * Add the correct display in all browsers.
   */
  
@@ -491,7 +491,7 @@
    display: list-item;
  }
  
- /* Scripting
+ /** Scripting
   * ========================================================================== */
  
  /**
@@ -510,10 +510,10 @@
    display: none;
  }
  
- /* User interaction
+ /** User interaction
   * ========================================================================== */
  
- /*
+ /**
   * Remove the tapping delay in IE 10.
   */
  
@@ -537,7 +537,7 @@
    display: none;
  }
  
- /* Accessibility
+ /** Accessibility
   * ========================================================================== */
  
  /**
@@ -548,7 +548,7 @@
    cursor: progress;
  }
  
- /*
+ /**
   * Change the cursor on control elements in all browsers (opinionated).
   */
  
@@ -556,7 +556,7 @@
    cursor: pointer;
  }
  
- /*
+ /**
   * Change the cursor on disabled, not-editable, or otherwise
   * inoperable elements in all browsers (opinionated).
   */
@@ -566,7 +566,7 @@
    cursor: not-allowed;
  }
  
- /*
+ /**
   * Change the display on visually hidden accessible elements
   * in all browsers (opinionated).
   */
@@ -587,17 +587,17 @@
 html {
   font-family:
     system-ui,
-    /* macOS 10.11-10.12 */ -apple-system,
-    /* Windows 6+ */ "Segoe UI",
-    /* Android 4+ */ "Roboto",
-    /* Ubuntu 10.10+ */ "Ubuntu",
-    /* Gnome 3+ */ "Cantarell",
-    /* KDE Plasma 5+ */ "Noto Sans",
-    /* fallback */ sans-serif,
-    /* macOS emoji */ "Apple Color Emoji",
-    /* Windows emoji */ "Segoe UI Emoji",
-    /* Windows emoji */ "Segoe UI Symbol",
-    /* Linux emoji */ "Noto Color Emoji";
+    /**macOS 10.11-10.12 */ -apple-system,
+    /**Windows 6+ */ "Segoe UI",
+    /**Android 4+ */ "Roboto",
+    /**Ubuntu 10.10+ */ "Ubuntu",
+    /**Gnome 3+ */ "Cantarell",
+    /**KDE Plasma 5+ */ "Noto Sans",
+    /**fallback */ sans-serif,
+    /**macOS emoji */ "Apple Color Emoji",
+    /**Windows emoji */ "Segoe UI Emoji",
+    /**Windows emoji */ "Segoe UI Symbol",
+    /**Linux emoji */ "Noto Color Emoji";
 }
 
 /**
@@ -625,7 +625,7 @@ pre {
 
 
 
-/**
+/*
 Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
 */
 
@@ -647,7 +647,7 @@ sup {
 
 
 
-/**
+/*
 Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
 */
 
@@ -656,7 +656,7 @@ legend {
 }
 
 
-/**
+/*
 1. Correct the odd appearance in Chrome and Safari.
 2. Correct the outline style in Safari.
 */

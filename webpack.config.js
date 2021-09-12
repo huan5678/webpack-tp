@@ -21,6 +21,7 @@ const assets = path => resolveApp(`app/assets/${path}`);
 
 const modeEnv = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 
+
 module.exports = {
   mode: modeEnv,
   resolve: {
@@ -83,6 +84,24 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\/app\/assets\/layout.ejs$/,
+        use: [{
+          loader: 'render-template-loader',
+          options: {
+            engine: 'ejs',
+            locals: {
+              title: 'Render Template Loader',
+              desc: 'Rendering templates with a Webpack loader since 2017'
+            },
+            engineOptions: function (info) {
+              // Ejs wants the template filename for partials rendering.
+              // (Configuring a "views" option can also be done.)
+              return { filename: info.filename }
+            }
+          }
+        }],
+      },
+      {
         test: /\.s[ac]ss$/i,
         include: assets('style/'),
         // 把 sass-loader 放在首要處理 (第一步)
@@ -129,9 +148,9 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
   }),
-  new PurgecssPlugin({
-    paths: glob.sync(`${path.resolve(__dirname, 'assets')}/**/*`,  { nodir: true }),
-  }),
+  // new PurgecssPlugin({
+  //   paths: glob.sync(`${path.resolve(__dirname, 'assets')}/**/*`,  { nodir: true }),
+  // }),
   new ProgressBarPlugin({
     format: `  :msg [:bar] ${chalk.green.bold(':percent')} (:elapsed s)`
   }),
