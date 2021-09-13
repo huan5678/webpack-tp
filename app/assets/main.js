@@ -1,5 +1,5 @@
-import 'jquery';
-import '@assets/scss/all.scss';
+import '@style/all.scss';
+import '@img/demo.jpg';
 
 let count = 0;
 
